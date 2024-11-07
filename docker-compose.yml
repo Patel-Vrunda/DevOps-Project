@@ -3,23 +3,16 @@ version: '3'
 services:
   django:
     build:
-      context: ./Django Project/EMS
+      context: "./Django Project/EMS"
     volumes:
-      - ./Django Project/EMS:/app
+      - "./Django Project/EMS:/app"
     ports:
       - "8000:8000"
-    depends_on:
-      - db
 
   react:
     build:
-      context: ./React App/emsfrontend
+      context: "./React App/emsfrontend"
     volumes:
-      - ./React App/emsfrontend:/app
+      - "./React App/emsfrontend:/app"
     ports:
       - "3000:3000"
-
-  db:
-    image: sqlite3:latest
-    volumes:
-      - ./data:/data

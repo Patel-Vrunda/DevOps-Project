@@ -4,11 +4,11 @@ FROM node:16
 WORKDIR /app
 
 # Install dependencies
-COPY package.json package-lock.json /app/
+COPY package*.json ./
 RUN npm install
 
 # Copy project files
-COPY . /app/
+COPY . .
 
 # Expose port
 EXPOSE 3000

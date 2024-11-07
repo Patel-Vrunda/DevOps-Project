@@ -1,4 +1,4 @@
-version: '3.8'  # You can set the appropriate version based on your needs
+# version: '3.8'  # You can set the appropriate version based on your needs
 services:
   jenkins:
     build:
